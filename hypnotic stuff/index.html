@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypnotic Webhook Sender</title>
+  </head>
+  <body>
+    <button onclick="sendMessage()">Send</button>
+  </body>
+
+  <script>
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discordapp.com/api/webhooks/761432794286522389/HrdYregUM4Ju3XSVFZER-5UhDEtEQrcuHCiShf3kXc0btWJClyO8YQBF04Oi4tbG35mM");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var myEmbed = {
+
+        color: 0x0099ff,
+	author: {
+		name: 'Team Hypnotic',
+		icon_url: 'https://media.discordapp.net/attachments/749942197456994315/771669314355855371/image0_2.png?width=478&height=478',
+		url: 'https://discord.js.org',
+	},
+	thumbnail: {
+		url: 'https://media.discordapp.net/attachments/749942197456994315/771669793375387658/unknown.png',
+	},
+	fields: [
+    {
+      name: 'Admins',
+			value: '- <@532331965651877888> `Leader`\n- <@527193259596972032> `Co-Owner`\n- <@487968937682927617> `Co-Owner`\n- <@383409072386473985> `Admin`\n- <@691690031072411688> `Admin`\n',
+			inline: false,
+    },
+		{
+			name: '\n----------------------------------------------\nMember Support Team',
+			value: '- <@383409072386473985> `Admin`\n- <@510736807999307786> `Team Mod`\n- <@412445055648006145> `Team Mod`\n- <@671894103784554506> `Member`',
+			inline: false,
+		},
+		{
+			name: 'Marketing Team',
+			value: '- <@580816062472388648> `Team Manager`\n- <@690127250347130907> `Member`\n- <@270088760790745088> `Member`',
+			inline: false,
+		},
+		{
+			name: 'Developer Team',
+			value: '- <@370128159036932096> `Team Manager`\n- <@701073493864743012> `Member`\n- <@573731282127814657> `Member`',
+			inline: false,
+    },
+    {
+			name: 'Content Creator Team',
+			value: '- <@527193259596972032> `Admin`\n- <@360197559752327170> `Team Mod`\n- <@688962309850136607> `Member`\n- <@723099515275444286> `Member`',
+			inline: false,
+    },
+    {
+			name: 'Event Team',
+			value: '- <@691690031072411688> `Admin`\n- <@504833609501376517> `Member`\n- <@374650791421673483> `Member`\n- <@737777821681844224> `Member`\n- <@516723164227567617> `Member`',
+			inline: false,
+		},
+	],
+	image: {
+		url: 'https://media.discordapp.net/attachments/749942197456994315/771669629743005726/Hypnotic_1.png',
+	},
+	timestamp: new Date(),
+	footer: {
+		text: 'By phoboz & scopes',
+	}
+  
+  
+  //"<@&707283992604442715> - **2 invites** - access to <#704546303820169296> channel\n\n<@&707284495585247252> - **5 invites** - server partnership, gets a official promotion on <#711447301830475867> once a month\n\n<@&707284595145572404> - **10 invites** - custom role, custom emote, get a official promotion three times in a month, a shoutout on insta\n\n<@&713903560554709014> - **20 invites**- one month nitro, one more custom emote, direct access to official promote channel, an advert post on insta\n\n<@&713901622643916800> - **50 inivites** - *TBD*"
+
+  
+}
+
+function hexToDecimal(hex) {
+  return parseInt(hex.replace("#",""), 16)
+}
+
+var params = {
+  username: "Hypnotic",
+  embeds: [ myEmbed ]
+}
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypnotic Webhook Sender</title>
+  </head>
+  <body>
+    <button onclick="sendMessage()">Send</button>
+  </body>
+
+  <script>
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discordapp.com/api/webhooks/761432794286522389/HrdYregUM4Ju3XSVFZER-5UhDEtEQrcuHCiShf3kXc0btWJClyO8YQBF04Oi4tbG35mM");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var myEmbed = {
+
+        color: 0xfffeff,
+	image:{
+    url:'https://media.discordapp.net/attachments/569739683991650314/774783643620737034/link.gif'
+    }
+		
+	}
+  
+  
+  //"<@&707283992604442715> - **2 invites** - access to <#704546303820169296> channel\n\n<@&707284495585247252> - **5 invites** - server partnership, gets a official promotion on <#711447301830475867> once a month\n\n<@&707284595145572404> - **10 invites** - custom role, custom emote, get a official promotion three times in a month, a shoutout on insta\n\n<@&713903560554709014> - **20 invites**- one month nitro, one more custom emote, direct access to official promote channel, an advert post on insta\n\n<@&713901622643916800> - **50 inivites** - *TBD*"
+
+  
+
+
+function hexToDecimal(hex) {
+  return parseInt(hex.replace("#",""), 16)
+}
+
+var params = {
+  username: "Hypnotic",
+  embeds: [ myEmbed ]
+}
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
+</html>
